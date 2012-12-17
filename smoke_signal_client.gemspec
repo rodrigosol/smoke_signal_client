@@ -7,16 +7,15 @@ require "smoke_signal_client/version"
 Gem::Specification.new do |s|
   s.name        = "smoke_signal_client"
   s.version     = SmokeSignalClient::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of SmokeSignalClient."
-  s.description = "TODO: Description of SmokeSignalClient."
+  s.authors     = ["Rodrigo Sol"]
+  s.email       = ["rodrigosol@rarolabs.com.br"]
+  s.homepage    = "http://www.github.com.br/rarolabs/smoke_signal_client"
+  s.summary     = "This is a client for the brand new multiple notifications system called smoke signal"
+  s.description = "This gem allows rails apps to communicate with a SmokeSignal Server"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.8"
 
-  s.add_development_dependency "sqlite3"
 end
