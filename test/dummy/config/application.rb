@@ -57,7 +57,7 @@ module Dummy
     
     config.smoke_signal_token = "teste"
     config.smoke_signal_protocol = "http"  
-    config.smoke_signal_url = "localhost"
+    config.smoke_signal_url = "192.168.1.112"
     config.smoke_signal_port = "3000"
   end
 end

@@ -3,61 +3,15 @@ require "uri"
 
 module SmokeSignalClient
     
-    class Alert  < ActiveResource::Base  
-      self.site = "http://localhost:3000/"
+  class Alert  < ActiveResource::Base  
+  end
+  class AlertType  < ActiveResource::Base  
+  end
 
-      # def self.all(owner)
-      #   uri = URI.parse("#{Rails.configuration.smoke_signal_protocol}://#{Rails.configuration.smoke_signal_url}:#{Rails.configuration.smoke_signal_port}/alerts.json?system=#{Rails.configuration.smoke_signal_token}&owner=#{owner}")
-      #   http = Net::HTTP.new(uri.host, uri.port)
-      #   request = Net::HTTP::Get.new(uri.request_uri)
-      #   response = http.request(request)
-      #   collection = []
-      #   ActiveSupport::JSON.decode(response.body).each do |obj|
-      #     a = Alert.new
-      #     a.attributes = obj
-      #     collection.push(a)
-      #   end
-      #   collection
-      # end
-      # 
-      # def self.find(owner, key)
-      #   uri = URI.parse("#{Rails.configuration.smoke_signal_protocol}://#{Rails.configuration.smoke_signal_url}:#{Rails.configuration.smoke_signal_port}/alerts.json?system=#{Rails.configuration.smoke_signal_token}&owner=#{owner}&key=#{key}")
-      #   http = Net::HTTP.new(uri.host, uri.port)
-      #   request = Net::HTTP::Get.new(uri.request_uri)
-      #   response = http.request(request)
-      #   collection = []
-      #   ActiveSupport::JSON.decode(response.body).each do |obj|
-      #     a = Alert.new
-      #     a.attributes = obj
-      #     collection.push(a)
-      #   end
-      #   collection
-      # 
-      # end
-      # 
-      # def destroy(owner,key)
-      # end
-      # 
-      # def self.events(owner)
-      # end
-      # 
-      # def self.events_by_key(owner,key)
-      # end
-      # 
-      # def self.create(data,owner)
-      #   data.owner = owner
-      #   uri = URI.parse("#{Rails.configuration.smoke_signal_protocol}://#{Rails.configuration.smoke_signal_url}:#{Rails.configuration.smoke_signal_port}/alerts.json?system=#{Rails.configuration.smoke_signal_token}&owner=#{owner}")
-      #   http = Net::HTTP.new(uri.host, uri.port)
-      #   request = Net::HTTP::Post.new(uri.request_uri)
-      #   request.body = {:alert => data.attributes}.to_json
-      #   response = http.request(request)
-      # 
-      #   a = Alert.new
-      #   a.attributes = ActiveSupport::JSON.decode(response.body)
-      #   return a
-      # end
-      
-    end
+  class Constraint  < ActiveResource::Base  
+  end
+
+
 
   module SmokeSignal
     module InstanceMethods
