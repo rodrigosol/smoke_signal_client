@@ -54,6 +54,11 @@ module Dummy
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    config.smoke_signal_token = "teste"
+    config.smoke_signal_protocol = "http"  
+    config.smoke_signal_url = "localhost"
+    config.smoke_signal_port = "3000"
   end
 end
 
