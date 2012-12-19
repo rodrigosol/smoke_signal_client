@@ -64,7 +64,7 @@ module SmokeSignalClient
       
       def smoke_signal_send_event
         
-          uri = URI.parse("#{Rails.configuration.smoke_signal_protocol}://#{Rails.configuration.smoke_signal_url}:#{Rails.configuration.smoke_signal_port}/events")
+          uri = URI.parse("#{Rails.configuration.smoke_signal_protocol}://#{Rails.configuration.smoke_signal_url}:#{Rails.configuration.smoke_signal_port}/event")
           http = Net::HTTP.new(uri.host, uri.port)
           request = Net::HTTP::Post.new(uri.request_uri)
           request.set_form_data(ss_parse(self.class.get_smoke_signal_attributes))
